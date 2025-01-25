@@ -99,18 +99,15 @@ Body (raw JSON) :
     ```
 
 Get All Tasks (GET /api/tasks)
-
     URL: http://localhost:8000/api/tasks
-    Mark a Task as Completed (PUT /api/tasks/{id})
-
+    
+Mark a Task as Completed (PUT /api/tasks/{id})
+    
     URL: http://localhost:8000/api/tasks/{id} (replace {id} with the task ID)
     Body (raw JSON):
-     ```bash
     {
         "status": "completed"
     }
-
-     ```
 
 Delete a Task (DELETE /api/tasks/{id})
 
