@@ -98,7 +98,7 @@ SESSION_LIFETIME=120
 
 Make sure to set your database credentials (DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD).
 
-##Running the Project Locally
+##    Running the Project Locally
 Migrate the database:
 
 1. Clone the repository:
