@@ -10,7 +10,6 @@ A simple Task Management API built with Laravel 11. This API allows users to cre
 - [Running the Project Locally](#running-the-project-locally)
 - [Testing the API](#testing-the-api)
 - [Sample .env.example](#sample-envexample)
-- [License](#license)
 
 ## Requirements
 
@@ -96,3 +95,64 @@ SESSION_LIFETIME=120
 
 # Uncomment and set if you are using API authentication
 # SANCTUM_STATEFUL_DOMAINS=localhost
+
+Make sure to set your database credentials (DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD).
+
+##Running the Project Locally
+Migrate the database:
+
+1. Clone the repository:
+
+    ```bash
+    php artisan migrate
+    ```
+2. If you need to seed the database with some sample tasks (optional), run:
+
+    ```bash
+    php artisan db:seed
+    ```
+3. Start the Laravel development server:
+
+    ```bash
+    php artisan serve
+    ```
+
+4. The application will now be running at
+     http://localhost:8000.
+
+##Testing the API
+You can test the API using Postman or Curl.
+
+Testing with Postman
+    1. Open Postman.
+
+    2. Use the following API endpoints to test the Task Management API:
+
+Create a Task (POST /api/tasks)
+
+URL: http://localhost:8000/api/tasks
+Body (raw JSON) : 
+     ```bash
+    {
+    "title": "Task Title",
+    "description": "Task description."
+}
+    ```
+
+Get All Tasks (GET /api/tasks)
+
+    URL: http://localhost:8000/api/tasks
+    Mark a Task as Completed (PUT /api/tasks/{id})
+
+    URL: http://localhost:8000/api/tasks/{id} (replace {id} with the task ID)
+    Body (raw JSON):
+     ```bash
+    {
+        "status": "completed"
+    }
+
+     ```
+
+Delete a Task (DELETE /api/tasks/{id})
+
+    URL: http://localhost:8000/api/tasks/{id} (replace {id} with the task ID)
